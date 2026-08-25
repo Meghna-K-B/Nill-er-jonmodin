@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =================================
+         PASSWORD / DOOR SCREEN
+    ================================== -->
+
+    <section id="doorScreen" class="screen">
+
+        <div class="stars"></div>
+
+        <div class="door-container">
+
+            <div class="door">
+                <div class="door-panel">
+
+                    <div class="door-knob"></div>
+
+                    <div class="door-title">
+                        🎁
+                        <p>A Surprise Awaits</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <h1>Someone Special Has a Surprise For You...</h1>
+
+            <p class="instruction">
+                Enter the secret password to unlock the door 🔐
+            </p>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="passwordInput"
+                    placeholder="Enter password"
+                >
+
+                <button onclick="unlockDoor()">
+                    🔓 Unlock
+                </button>
+
+            </div>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         BIRTHDAY SCREEN
+    ================================== -->
+
+    <section id="birthdayScreen" class="hidden">
+
+        <div class="confetti"></div>
+
+        <div class="birthday-content">
+
+            <p class="small-title">
+                ✨ A Special Message For You ✨
+            </p>
+
+            <h1>
+                Happy Birthday
+            </h1>
+
+            <h2>
+                My Dear Soulmate! ❤️
+            </h2>
+
+            <div class="photo-frame">
+
+                <img
+                    src="images/nill.jpg"
+                    alt="Birthday Photo"
+                >
+
+            </div>
+
+            <p class="birthday-message">
+                Today is not just another day...
+                it's the day a wonderful person came into this world. ❤️
+                <br><br>
+
+                May your life always be filled with happiness,
+                laughter, love and beautiful memories.
+                <br><br>
+
+                Keep smiling and keep being the amazing person you are! 🎂✨
+            </p>
+
+            <button
+                class="gift-button"
+                onclick="showGifts()"
+            >
+                🎁 Claim Your Gift
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         GIFT SCREEN
+    ================================== -->
+
+    <section id="giftScreen" class="hidden">
+
+    <div class="gift-content">
+
+        <p class="small-title">
+            🎁 Your Birthday Gifts 🎁
+        </p>
+
+        <h1>Choose Your Surprise</h1>
+
+        <p>
+            There is something special hidden inside every box...
+        </p>
+
+        <div class="gift-container">
+
+            <div class="gift-box" onclick="openGift(1)">
+                <div class="gift-lid">🎀</div>
+                <div class="gift-body">🎁</div>
+                <p>Gift 1</p>
+            </div>
+
+            <div class="gift-box" onclick="openGift(2)">
+                <div class="gift-lid">🎀</div>
+                <div class="gift-body">🎁</div>
+                <p>Gift 2</p>
+            </div>
+
+            <div class="gift-box" onclick="openGift(3)">
+                <div class="gift-lid">🎀</div>
+                <div class="gift-body">🎁</div>
+                <p>Gift 3</p>
+            </div>
+
+            <div class="gift-box" onclick="openGift(4)">
+                <div class="gift-lid">🎀</div>
+                <div class="gift-body">🎁</div>
+                <p>Gift 4</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- =================================
+         GIFT POPUP
+    ================================== -->
+
+    <div
+        id="giftPopup"
+        class="popup hidden"
+    >
+
+        <div class="popup-content">
+
+            <button
+                class="close-button"
+                onclick="closeGift()"
+            >
+                ✕
+            </button>
+
+            <div id="giftResult"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
